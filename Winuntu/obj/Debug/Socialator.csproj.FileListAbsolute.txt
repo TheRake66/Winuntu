@@ -1,0 +1,23 @@
+D:\Users\TheRake66\Desktop\Socialator\Socialator\bin\Debug\Socialator.exe.config
+D:\Users\TheRake66\Desktop\Socialator\Socialator\bin\Debug\Socialator.exe
+D:\Users\TheRake66\Desktop\Socialator\Socialator\bin\Debug\Socialator.pdb
+D:\Users\TheRake66\Desktop\Socialator\Socialator\obj\Debug\Socialator.csprojAssemblyReference.cache
+D:\Users\TheRake66\Desktop\Socialator\Socialator\obj\Debug\Socialator.Menu.resources
+D:\Users\TheRake66\Desktop\Socialator\Socialator\obj\Debug\Socialator.Properties.Resources.resources
+D:\Users\TheRake66\Desktop\Socialator\Socialator\obj\Debug\Socialator.csproj.GenerateResource.cache
+D:\Users\TheRake66\Desktop\Socialator\Socialator\obj\Debug\Socialator.exe
+D:\Users\TheRake66\Desktop\Socialator\Socialator\obj\Debug\Socialator.pdb
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\bin\Debug\Socialator.exe.config
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\bin\Debug\Socialator.exe
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\bin\Debug\Socialator.pdb
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.csprojAssemblyReference.cache
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.Menu.resources
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.Properties.Resources.resources
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.csproj.GenerateResource.cache
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.exe
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.pdb
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.csproj.CoreCompileInputs.cache
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\bin\Debug\MetroFramework.Design.dll
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\bin\Debug\MetroFramework.dll
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\bin\Debug\MetroFramework.Fonts.dll
+D:\Users\TheRake66\Desktop\Socialator - Copie\Socialator\obj\Debug\Socialator.csproj.CopyComplete

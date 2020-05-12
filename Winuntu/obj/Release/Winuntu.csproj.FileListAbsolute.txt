@@ -1,0 +1,12 @@
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Release\Winuntu.exe.config
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Release\Winuntu.exe
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Release\Winuntu.pdb
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.Menu.resources
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.MenuInfos.resources
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.MenuProfil.resources
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.Properties.Resources.resources
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.csproj.GenerateResource.cache
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.csproj.CoreCompileInputs.cache
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.exe
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.pdb
+D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Release\Winuntu.csprojAssemblyReference.cache
