@@ -33,6 +33,8 @@ namespace Winuntu
             OriginalCmd = (Bitmap)PicturePreviewCmd.Image.Clone();
             OriginalPS = (Bitmap)PicturePreviewPS.Image.Clone();
 
+
+            // Lol
             CurrentProfil = pProfil;
 
             if (pProfil == null)
