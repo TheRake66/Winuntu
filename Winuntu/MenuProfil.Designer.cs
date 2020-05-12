@@ -43,7 +43,6 @@
             this.PanelPreviewPS = new System.Windows.Forms.Panel();
             this.PicturePreviewPS = new System.Windows.Forms.PictureBox();
             this.PanelPreviewCmd = new System.Windows.Forms.Panel();
-            this.PicturePreviewCmd = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TrackOpacity = new System.Windows.Forms.TrackBar();
             this.TextBoxWallpaper = new System.Windows.Forms.TextBox();
@@ -59,6 +58,9 @@
             this.ButtonSupprimer = new System.Windows.Forms.Button();
             this.ButtonAnnuler = new System.Windows.Forms.Button();
             this.ButtonCreer = new System.Windows.Forms.Button();
+            this.PicturePreviewCmdWallpaper = new System.Windows.Forms.PictureBox();
+            this.PicturePreviewPSWallpaper = new System.Windows.Forms.PictureBox();
+            this.PicturePreviewCmd = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureOpenDirectory)).BeginInit();
@@ -67,11 +69,13 @@
             this.PanelPreviewPS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewPS)).BeginInit();
             this.PanelPreviewCmd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewCmd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackOpacity)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewCmdWallpaper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewPSWallpaper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewCmd)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -214,6 +218,7 @@
             // 
             this.PanelPreviewPS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelPreviewPS.Controls.Add(this.PicturePreviewPS);
+            this.PanelPreviewPS.Controls.Add(this.PicturePreviewPSWallpaper);
             this.PanelPreviewPS.Location = new System.Drawing.Point(333, 125);
             this.PanelPreviewPS.Name = "PanelPreviewPS";
             this.PanelPreviewPS.Size = new System.Drawing.Size(275, 150);
@@ -221,12 +226,15 @@
             // 
             // PicturePreviewPS
             // 
+            this.PicturePreviewPS.BackColor = System.Drawing.Color.Transparent;
+            this.PicturePreviewPS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PicturePreviewPS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PicturePreviewPS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PicturePreviewPS.Image = ((System.Drawing.Image)(resources.GetObject("PicturePreviewPS.Image")));
             this.PicturePreviewPS.Location = new System.Drawing.Point(0, 0);
             this.PicturePreviewPS.Name = "PicturePreviewPS";
             this.PicturePreviewPS.Size = new System.Drawing.Size(275, 150);
+            this.PicturePreviewPS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicturePreviewPS.TabIndex = 2;
             this.PicturePreviewPS.TabStop = false;
             // 
@@ -234,21 +242,11 @@
             // 
             this.PanelPreviewCmd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelPreviewCmd.Controls.Add(this.PicturePreviewCmd);
+            this.PanelPreviewCmd.Controls.Add(this.PicturePreviewCmdWallpaper);
             this.PanelPreviewCmd.Location = new System.Drawing.Point(52, 125);
             this.PanelPreviewCmd.Name = "PanelPreviewCmd";
             this.PanelPreviewCmd.Size = new System.Drawing.Size(275, 150);
             this.PanelPreviewCmd.TabIndex = 22;
-            // 
-            // PicturePreviewCmd
-            // 
-            this.PicturePreviewCmd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PicturePreviewCmd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PicturePreviewCmd.Image = ((System.Drawing.Image)(resources.GetObject("PicturePreviewCmd.Image")));
-            this.PicturePreviewCmd.Location = new System.Drawing.Point(0, 0);
-            this.PicturePreviewCmd.Name = "PicturePreviewCmd";
-            this.PicturePreviewCmd.Size = new System.Drawing.Size(275, 150);
-            this.PicturePreviewCmd.TabIndex = 1;
-            this.PicturePreviewCmd.TabStop = false;
             // 
             // label4
             // 
@@ -427,6 +425,44 @@
             this.ButtonCreer.UseVisualStyleBackColor = true;
             this.ButtonCreer.Click += new System.EventHandler(this.ButtonCreer_Click);
             // 
+            // PicturePreviewCmdWallpaper
+            // 
+            this.PicturePreviewCmdWallpaper.BackColor = System.Drawing.Color.Transparent;
+            this.PicturePreviewCmdWallpaper.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PicturePreviewCmdWallpaper.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicturePreviewCmdWallpaper.Location = new System.Drawing.Point(0, 0);
+            this.PicturePreviewCmdWallpaper.Name = "PicturePreviewCmdWallpaper";
+            this.PicturePreviewCmdWallpaper.Size = new System.Drawing.Size(275, 150);
+            this.PicturePreviewCmdWallpaper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicturePreviewCmdWallpaper.TabIndex = 2;
+            this.PicturePreviewCmdWallpaper.TabStop = false;
+            // 
+            // PicturePreviewPSWallpaper
+            // 
+            this.PicturePreviewPSWallpaper.BackColor = System.Drawing.Color.Transparent;
+            this.PicturePreviewPSWallpaper.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PicturePreviewPSWallpaper.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicturePreviewPSWallpaper.Location = new System.Drawing.Point(0, 0);
+            this.PicturePreviewPSWallpaper.Name = "PicturePreviewPSWallpaper";
+            this.PicturePreviewPSWallpaper.Size = new System.Drawing.Size(275, 150);
+            this.PicturePreviewPSWallpaper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicturePreviewPSWallpaper.TabIndex = 3;
+            this.PicturePreviewPSWallpaper.TabStop = false;
+            // 
+            // PicturePreviewCmd
+            // 
+            this.PicturePreviewCmd.BackColor = System.Drawing.Color.Transparent;
+            this.PicturePreviewCmd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PicturePreviewCmd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PicturePreviewCmd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicturePreviewCmd.Image = ((System.Drawing.Image)(resources.GetObject("PicturePreviewCmd.Image")));
+            this.PicturePreviewCmd.Location = new System.Drawing.Point(0, 0);
+            this.PicturePreviewCmd.Name = "PicturePreviewCmd";
+            this.PicturePreviewCmd.Size = new System.Drawing.Size(275, 150);
+            this.PicturePreviewCmd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicturePreviewCmd.TabIndex = 1;
+            this.PicturePreviewCmd.TabStop = false;
+            // 
             // MenuProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,12 +487,14 @@
             this.PanelPreviewPS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewPS)).EndInit();
             this.PanelPreviewCmd.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewCmd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TrackOpacity)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewCmdWallpaper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewPSWallpaper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicturePreviewCmd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,7 +517,6 @@
         private System.Windows.Forms.Panel PanelPreviewPS;
         private System.Windows.Forms.PictureBox PictureOpenWallpaper;
         private System.Windows.Forms.PictureBox PicturePreviewPS;
-        private System.Windows.Forms.PictureBox PicturePreviewCmd;
         private System.Windows.Forms.PictureBox PictureOpenDirectory;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TextBoxCommandPS;
@@ -493,5 +530,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button ButtonCreer;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox PicturePreviewPSWallpaper;
+        private System.Windows.Forms.PictureBox PicturePreviewCmdWallpaper;
+        private System.Windows.Forms.PictureBox PicturePreviewCmd;
     }
 }

@@ -20,7 +20,6 @@ D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.Menu.resources
 D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.Properties.Resources.resources
 D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.csproj.GenerateResource.cache
 D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.csproj.CoreCompileInputs.cache
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.csproj.CopyComplete
 D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.exe
 D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.pdb
 D:\Users\TheRake66\Desktop\Winuntu - Copie\Winuntu\bin\Debug\Winuntu.exe.config
@@ -49,20 +48,5 @@ D:\Users\TheRake66\Desktop\Winuntu - Copie\Winuntu\bin\Debug\Win32Interop.Gdi32.
 D:\Users\TheRake66\Desktop\Winuntu - Copie\Winuntu\bin\Debug\Win32Interop.Kernel32.pdb
 D:\Users\TheRake66\Desktop\Winuntu - Copie\Winuntu\bin\Debug\Win32Interop.User32.pdb
 D:\Users\TheRake66\Desktop\Winuntu - Copie\Winuntu\bin\Debug\Win32Interop.Uxtheme.pdb
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\EasyTabs.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Microsoft.WindowsAPICodePack.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Dwmapi.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Gdi32.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Kernel32.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.User32.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Uxtheme.dll
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\EasyTabs.xml
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Dwmapi.pdb
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Gdi32.pdb
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Gdi32.xml
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Kernel32.pdb
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.User32.pdb
-D:\Users\TheRake66\Desktop\Winuntu\Winuntu\bin\Debug\Win32Interop.Uxtheme.pdb
 D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.MenuProfil.resources
 D:\Users\TheRake66\Desktop\Winuntu\Winuntu\obj\Debug\Winuntu.MenuInfos.resources

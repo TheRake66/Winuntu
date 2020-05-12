@@ -29,8 +29,8 @@ namespace Winuntu
         private void MenuInfos_Load(object sender, EventArgs e)
         {
             //-----------------------------------------------
-            label5.Text = "Version " + ((Menu)Owner).VERSION + " (" + ((Menu)Owner).ARCH + ")";
-            label6.Text = ((Menu)Owner).COPYRIGHT;
+            label5.Text = "Version " + Winuntu.Menu.VERSION + " (" + Winuntu.Menu.ARCH + ")";
+            label6.Text = Winuntu.Menu.COPYRIGHT;
             //-----------------------------------------------
         }
         //=====================================================================
@@ -41,10 +41,7 @@ namespace Winuntu
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //-----------------------------------------------
-            try
-            {
-                Process.Start("explorer.exe", linkLabel1.Text);
-            }
+            try { Process.Start("explorer.exe", linkLabel1.Text); }
             catch { }
             //-----------------------------------------------
         }

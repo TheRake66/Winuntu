@@ -68,5 +68,25 @@ namespace Winuntu.Properties {
                 return ResourceManager.GetString("String", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] USkinDLL {
+            get {
+                object obj = ResourceManager.GetObject("USkinDLL", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Byte[].
+        /// </summary>
+        internal static byte[] Zune {
+            get {
+                object obj = ResourceManager.GetObject("Zune", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

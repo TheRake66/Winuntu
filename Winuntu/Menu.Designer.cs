@@ -751,6 +751,7 @@
             this.Text = "Winuntu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
+            this.ResizeEnd += new System.EventHandler(this.Menu_ResizeEnd);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

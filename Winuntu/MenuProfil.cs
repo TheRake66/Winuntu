@@ -30,40 +30,46 @@ namespace Winuntu
         {
             //-----------------------------------------------
             InitializeComponent();
+            CurrentProfil = pProfil;
+            // Supperpose les images de preview du wallpaper (pour les gifs)
+            PicturePreviewCmdWallpaper.Controls.Add(PicturePreviewCmd);
+            PicturePreviewPSWallpaper.Controls.Add(PicturePreviewPS);
+            //-----------------------------------------------
+        }
+        //=====================================================================
+
+
+
+        //=====================================================================
+        private void MenuProfil_Load(object sender, EventArgs e)
+        {
+            //-----------------------------------------------
+            // Clone les images pour le changement d'opacité
             OriginalCmd = (Bitmap)PicturePreviewCmd.Image.Clone();
             OriginalPS = (Bitmap)PicturePreviewPS.Image.Clone();
 
-
-            // Lol
-            CurrentProfil = pProfil;
-
-            if (pProfil == null)
+            // Nouveau profil
+            if (CurrentProfil == null)
             {
                 this.Text = "Créer un profil";
                 ButtonSupprimer.Visible = false;
                 ButtonCreer.Text = "Créer";
             }
+            // Modifier profil
             else
             {
-                TextBoxName.Text = pProfil.Name;
-                TextBoxDirectory.Text = pProfil.Directory;
-                TextBoxDesc.Text = pProfil.Description;
-                TextBoxWallpaper.Text = pProfil.Wallpaper;
-                int opacityverif = (int)Math.Round(10.0 / 255.0 * pProfil.Opacity, 0);
-                if (opacityverif > 10)
-                {
-                    TrackOpacity.Value = 10;
-                }
-                else if (opacityverif < 0)
-                {
-                    TrackOpacity.Value = 0;
-                }
-                else
-                {
-                    TrackOpacity.Value = opacityverif;
-                }
-                TextBoxCommandCmd.Text = pProfil.CommandCmd;
-                TextBoxCommandPS.Text = pProfil.CommandPS;
+                // Charge les infos du profil
+                TextBoxName.Text = CurrentProfil.Name;
+                TextBoxDirectory.Text = CurrentProfil.Directory;
+                TextBoxDesc.Text = CurrentProfil.Description;
+                TextBoxWallpaper.Text = CurrentProfil.Wallpaper;
+                int opacityverif = (int)Math.Round(10.0 / 255.0 * CurrentProfil.Opacity, 0);
+                // Si le profil à été modifier
+                if (opacityverif > 10) { TrackOpacity.Value = 10; }
+                else if (opacityverif < 0) { TrackOpacity.Value = 0; }
+                else { TrackOpacity.Value = opacityverif; }
+                TextBoxCommandCmd.Text = CurrentProfil.CommandCmd;
+                TextBoxCommandPS.Text = CurrentProfil.CommandPS;
             }
             //-----------------------------------------------
         }
@@ -75,6 +81,7 @@ namespace Winuntu
         private void PictureOpenWallpaper_Click(object sender, EventArgs e)
         {
             //-----------------------------------------------
+            // Prepare le dialog
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Title = "Choisissez une image...";
             dialog.Filter = "Tous les fichiers (*.*)|*.*|.GIF (*.gif)|*.gif|.JPG (*.jpg)|*.jpg|.JPEG (*.jpeg)|*.jpeg|.PNG (*.png)|*.png";
@@ -99,16 +106,20 @@ namespace Winuntu
         private void TextBoxWallpaper_TextChanged(object sender, EventArgs e)
         {
             //-----------------------------------------------
-            if (File.Exists(TextBoxWallpaper.Text))
+            // Change l'image
+            // Si caractere non conforme
+            try
             {
-                PanelPreviewCmd.BackgroundImage = Image.FromFile(TextBoxWallpaper.Text);
-                PanelPreviewPS.BackgroundImage = Image.FromFile(TextBoxWallpaper.Text);
+                PicturePreviewCmdWallpaper.Image = Image.FromFile(TextBoxWallpaper.Text);
+                PicturePreviewPSWallpaper.Image = Image.FromFile(TextBoxWallpaper.Text);
             }
+            catch { }
             //-----------------------------------------------
         }
         private void TrackOpacity_ValueChanged(object sender, EventArgs e)
         {
             //-----------------------------------------------
+            // Change l'opacite
             ChangerOpacite(OriginalCmd, PicturePreviewCmd);
             ChangerOpacite(OriginalPS, PicturePreviewPS);
             //-----------------------------------------------
@@ -121,6 +132,7 @@ namespace Winuntu
             {
                 for (int h = 0; h < pic.Height; h++)
                 {
+                    // Change l'oppacite de chaque pixel
                     Color c = pic.GetPixel(w, h);
                     Color newC = Color.FromArgb(255 / 10 * TrackOpacity.Value, c);
                     pic.SetPixel(w, h, newC);
@@ -137,14 +149,12 @@ namespace Winuntu
         private void PictureOpenDirectory_Click(object sender, EventArgs e)
         {
             //-----------------------------------------------
+            // Prepare le dialog
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             dialog.Description = "Choisissez le répertoire de travail...";
             dialog.ShowNewFolderButton = true;
 
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                TextBoxDirectory.Text = dialog.SelectedPath;
-            }
+            if (dialog.ShowDialog() == DialogResult.OK) { TextBoxDirectory.Text = dialog.SelectedPath; }
 
             dialog.Dispose();
             //-----------------------------------------------
@@ -165,19 +175,12 @@ namespace Winuntu
             //-----------------------------------------------
             if (TextBoxName.Text.Replace(" ", "") == "")
             {
-                ((Menu)Owner).Message_Error("Aucun nom de profil n'a été sélectionner.");
+                Winuntu.Menu.Message_Error("Aucun nom de profil n'a été sélectionner.");
                 return;
             }
 
-            if (CurrentProfil == null)
-            {
-                CreerProfil();
-            }
-            else
-            {
-                ModifierProfil();
-            }
-
+            if (CurrentProfil == null) { CreerProfil(); }
+            else { ModifierProfil(); }
             this.Close();
             //-----------------------------------------------
         }
@@ -189,6 +192,7 @@ namespace Winuntu
         private void ModifierProfil()
         {
             //-----------------------------------------------
+            // Met à jour les informations
             Ini ini = new Ini(CurrentProfil.FichierIni);
             ini.WriteKey("Settings", "Name", TextBoxName.Text);
             ini.WriteKey("Settings", "Wallpaper", TextBoxWallpaper.Text);
@@ -197,7 +201,6 @@ namespace Winuntu
             ini.WriteKey("Settings", "CommandCmd", TextBoxCommandCmd.Text);
             ini.WriteKey("Settings", "CommandPS", TextBoxCommandPS.Text);
             ini.WriteKey("Settings", "Directory", TextBoxDirectory.Text);
-            ini = null;
 
             CurrentProfil.Name = TextBoxName.Text;
             CurrentProfil.Wallpaper = TextBoxWallpaper.Text;
@@ -207,19 +210,19 @@ namespace Winuntu
             CurrentProfil.CommandPS = TextBoxCommandPS.Text;
             CurrentProfil.Directory = TextBoxDirectory.Text;
 
+            // Actualise l'affichage (fond d'écran)
             ((Menu)Owner).AfficherInstance();
             //-----------------------------------------------
         }
         private void CreerProfil()
         {
             //-----------------------------------------------
+            // Cherche un nom de fichier inexistant
             int count = 0;
-            while (File.Exists(((Menu)Owner).FOLDER_PROFILS + @"\" + count + ".ini"))
-            {
-                count++;
-            }
-            string file = ((Menu)Owner).FOLDER_PROFILS + @"\" + count + ".ini";
+            while (File.Exists(Winuntu.Menu.FOLDER_PROFILS + @"\" + count + ".ini")) { count++; }
+            string file = (Winuntu.Menu.FOLDER_PROFILS + @"\" + count + ".ini");
 
+            // Enregistre le profil
             Ini ini = new Ini(file);
             ini.WriteKey("Settings", "Name", TextBoxName.Text);
             ini.WriteKey("Settings", "Wallpaper", TextBoxWallpaper.Text);
@@ -228,7 +231,6 @@ namespace Winuntu
             ini.WriteKey("Settings", "CommandCmd", TextBoxCommandCmd.Text);
             ini.WriteKey("Settings", "CommandPS", TextBoxCommandPS.Text);
             ini.WriteKey("Settings", "Directory", TextBoxDirectory.Text);
-            ini = null;
 
             ((Menu)Owner).AjouterProfil(
                 TextBoxName.Text,
@@ -238,8 +240,8 @@ namespace Winuntu
                 TextBoxCommandCmd.Text,
                 TextBoxCommandPS.Text,
                 TextBoxDirectory.Text,
-                file
-                );
+                file,
+                true);
 
             ((Menu)Owner).AjouterInstanceCmd();
             ((Menu)Owner).AjouterInstancePS();
@@ -248,14 +250,12 @@ namespace Winuntu
         private void ButtonSupprimer_Click(object sender, EventArgs e)
         {
             //-----------------------------------------------
+            if (!Winuntu.Menu.Message_Continue("Êtes-vous sûr de vouloir supprimer le profil ?")) { return; }
+
             ((Menu)Owner).SupprimerProfil(CurrentProfil);
+            ((Menu)Owner).AfficherInstance();
             this.Close();
             //-----------------------------------------------
-        }
-
-        private void MenuProfil_Load(object sender, EventArgs e)
-        {
-
         }
         //=====================================================================
     }
